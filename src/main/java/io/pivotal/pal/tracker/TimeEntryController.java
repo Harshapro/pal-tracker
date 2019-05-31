@@ -64,7 +64,4 @@ public class TimeEntryController {
         return new ResponseEntity(HttpStatus.NO_CONTENT);
 
     }
-
-
-
 }

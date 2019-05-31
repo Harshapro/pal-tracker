@@ -5,5 +5,5 @@ applications:
     path: build/libs/pal-tracker.jar
     routes:
       - route: pal-tracker-harsha-ramisetti.apps.pcf.paltraining.perficient.com
-    env:
-      WELCOME_MESSAGE: Hello from the review environment
+env:
+  WELCOME_MESSAGE: Hello from the review environment

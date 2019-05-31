@@ -5,7 +5,7 @@ import java.util.*;
 
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     HashMap<Long,TimeEntry> result;
-     long id=0L;
+    long id=0L;
     public InMemoryTimeEntryRepository() {
         result=new HashMap<>();
     }
@@ -20,7 +20,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     @Override
-    public TimeEntry find(long timeEntryId) {
+    public TimeEntry find(Long timeEntryId) {
         if(result.containsKey(timeEntryId)) {
             return result.get(timeEntryId);
         }
@@ -40,7 +40,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     @Override
-    public TimeEntry update(long eq, TimeEntry any) {
+    public TimeEntry update(Long eq, TimeEntry any) {
 
         if(result.containsKey(eq)) {
             any.setId(id);
@@ -52,8 +52,8 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     }
 
     @Override
-    public void delete(long timeEntryId) {
-    result.remove(timeEntryId);
+    public void delete(Long timeEntryId) {
+        result.remove(timeEntryId);
     }
 
 
